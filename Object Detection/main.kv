@@ -1,0 +1,42 @@
+<MyLayout>
+	id: my_widget
+	FloatLayout:
+
+		orientation: "vertical"
+		size: root.width, root.height
+
+		padding: 50
+		spacing: 20
+
+		Video:
+			id: my_video
+			source:'test/vdog.mp4'
+			play:True
+			keep_ratio:True
+            size_hint: 0.25, 0.25
+            pos_hint:{"x":.1,"y":.5}
+            
+		Button:
+            
+            pos_hint:{"x":.1,"y":.3}
+            size_hint:(.25,.25)
+            background_color:(0,0,0,1)
+		
+
+		FileChooserListView:
+			id: filechooser
+            path:'test'
+			background_color:(.3,1,.0,1)
+            pos_hint:{"x":.1,"y":.3}
+            size_hint:(.25,.25)
+			on_selection: my_widget.selected(filechooser.selection)
+			color: 1,.9,0,1
+
+		
+	
+
+
+	
+   
+        
+    		

@@ -1,0 +1,38 @@
+https://www.youtube.com/watch?v=2yQqg_mXuPQ
+
+install anaconda, visual c++ redistributable
+open anaconda promt
+conda create -n tf_gpu python==3.9
+conda activate tf_gpu
+conda install cudatoolkit=11.2 cudnn=8.1 -c=conda-forge
+pip install tensorflow-gpu==2.6
+if needed: pip install protobuf==3.20.*
+python
+>>import tensorflow as tf
+>>import os
+>>os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+>>tf.test.is_gpu_available()
+>>tf.config.list_physical_devices('GPU')
+>>exit()
+pip install opencv-python
+
+model: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md
+
+VS CODE PYTHON INTERPRETER:  'C:\Users\pc\anaconda3\envs\tf_gpu\python.exe'
+
+pip install keras==2.6
+pip install pillow
+pip install moviepy
+
+
+
+no module named '_pywrap_tensorflow'
+conda activate tf_gpu
+python -m pip install --upgrade pip wheel setuptools
+python -m pip install docutils pygments pypiwin32 kivy.deps.sd12 kivy.deps.glew
+python -m pip install kivy.deps.gstreamer
+python -m pip install kivy.deps.angle
+python -m pip install pygame
+python -m pip install kivy
+
+pip install pyttsx3
